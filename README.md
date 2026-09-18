@@ -39,7 +39,7 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/KarKar3333/WebShedule.git
+git clone https://github.com/KarKar3333/SheduleNSMKv2.9.git
 cd SheduleNSMKv2.9
 ```
 
@@ -50,6 +50,14 @@ composer install
 ```
 
 ### 3. Установка JavaScript-зависимостей
+
+Windows PowerShell:
+
+```powershell
+npm.cmd install
+```
+
+Если PowerShell разрешает запуск `npm.ps1`, можно использовать:
 
 ```bash
 npm install
@@ -113,6 +121,8 @@ Linux/macOS:
 touch database/database.sqlite
 ```
 
+В `.env` должно быть:
+
 ### 8. Создание таблиц
 
 ```bash
@@ -125,17 +135,27 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### 10. Запуск frontend
+### 10. Сборка frontend
 
-В отдельном терминале:
+Для первого запуска:
+
+```powershell
+npm.cmd run build
+```
+
+После выполнения должна появиться:
+
+```text
+public/build/manifest.json
+```
+
+Если PowerShell разрешает запуск `npm.ps1`, можно использовать:
 
 ```bash
-npm run dev
+npm run build
 ```
 
 ### 11. Запуск Laravel
-
-В другом терминале:
 
 ```bash
 php artisan serve
@@ -147,14 +167,28 @@ php artisan serve
 http://127.0.0.1:8000
 ```
 
-## Запуск после первой установки
+## Запуск frontend в режиме разработки
 
-Если проект уже установлен, достаточно открыть два терминала.
+Для разработки можно использовать Vite:
+
+```powershell
+npm.cmd run dev
+```
+
+Эту команду нужно оставить запущенной в отдельном терминале.
+
+В другом терминале запустить Laravel:
+
+```bash
+php artisan serve
+```
+
+## Запуск после первой установки
 
 Терминал 1:
 
-```bash
-npm run dev
+```powershell
+npm.cmd run dev
 ```
 
 Терминал 2:
@@ -163,7 +197,7 @@ npm run dev
 php artisan serve
 ```
 
-После этого открыть:
+Затем открыть:
 
 ```text
 http://127.0.0.1:8000
@@ -171,10 +205,10 @@ http://127.0.0.1:8000
 
 ## Сборка frontend
 
-Для production-сборки:
+Production-сборка:
 
-```bash
-npm run build
+```powershell
+npm.cmd run build
 ```
 
 ## База данных
