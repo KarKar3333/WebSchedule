@@ -113,12 +113,6 @@ Linux/macOS:
 touch database/database.sqlite
 ```
 
-В `.env` должно быть:
-
-```env
-DB_CONNECTION=sqlite
-```
-
 ### 8. Создание таблиц
 
 ```bash
