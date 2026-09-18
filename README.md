@@ -39,7 +39,7 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/KarKar3333/SheduleNSMKv2.9.git
+git clone https://github.com/KarKar3333/WebShedule.git
 cd SheduleNSMKv2.9
 ```
 
