@@ -39,7 +39,7 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/KarKar3333/SheduleNSMKv2.9.git
+git clone https://github.com/KarKar3333/WebShedule.git
 cd SheduleNSMKv2.9
 ```
 
@@ -147,12 +147,6 @@ npm.cmd run build
 
 ```text
 public/build/manifest.json
-```
-
-Если PowerShell разрешает запуск `npm.ps1`, можно использовать:
-
-```bash
-npm run build
 ```
 
 ### 11. Запуск Laravel
