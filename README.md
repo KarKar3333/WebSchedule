@@ -1,4 +1,3 @@
-````markdown
 # SheduleNSMK
 
 Веб-приложение для создания и управления расписанием учебных занятий.
@@ -9,22 +8,20 @@
 - поддержка двух учебных недель;
 - добавление, редактирование и удаление занятий;
 - управление группами, преподавателями, предметами и аудиториями;
-- привязка нескольких предметов к одному преподавателю;
+- несколько предметов у одного преподавателя;
 - Drag & Drop для перемещения занятий;
 - обмен занятиями при перемещении в занятую ячейку;
 - проверка конфликтов расписания;
-- поиск по расписанию;
-- добавление заметок к занятиям;
+- поиск;
+- заметки к занятиям;
 - печать расписания;
 - тёмная тема;
-- разграничение прав доступа пользователей.
+- разграничение прав доступа.
 
 ## Роли
 
-В системе предусмотрены три роли:
-
-- **Администратор** — управление пользователями и справочниками;
-- **Преподаватель** — работа с доступными ему предметами и занятиями;
+- **Администратор** — управление пользователями и справочниками.
+- **Преподаватель** — работа с доступными предметами и занятиями.
 - **Студент** — просмотр расписания.
 
 ## Технологии
@@ -39,12 +36,12 @@
 
 ## Установка
 
-### 1. Клонирование
+### 1. Клонирование репозитория
 
 ```bash
-git clone <URL_РЕПОЗИТОРИЯ>
-cd SheduleNSMK
-````
+git clone https://github.com/KarKar3333/SheduleNSMKv2.9.git
+cd SheduleNSMKv2.9
+```
 
 ### 2. Установка PHP-зависимостей
 
@@ -58,9 +55,7 @@ composer install
 npm install
 ```
 
-### 4. Настройка окружения
-
-Создать `.env` из `.env.example`.
+### 4. Создание файла окружения
 
 Windows PowerShell:
 
@@ -74,17 +69,37 @@ Linux/macOS:
 cp .env.example .env
 ```
 
-### 5. Генерация ключа приложения
+### 5. Создание необходимых директорий Laravel
+
+Windows PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force storage\framework\cache\data
+New-Item -ItemType Directory -Force storage\framework\sessions
+New-Item -ItemType Directory -Force storage\framework\views
+New-Item -ItemType Directory -Force storage\logs
+New-Item -ItemType Directory -Force bootstrap\cache
+```
+
+Linux/macOS:
+
+```bash
+mkdir -p storage/framework/cache/data
+mkdir -p storage/framework/sessions
+mkdir -p storage/framework/views
+mkdir -p storage/logs
+mkdir -p bootstrap/cache
+```
+
+### 6. Генерация ключа приложения
 
 ```bash
 php artisan key:generate
 ```
 
-### 6. Создание базы данных
+### 7. Создание базы данных
 
 Проект использует SQLite.
-
-Создать файл базы данных:
 
 Windows PowerShell:
 
@@ -98,41 +113,67 @@ Linux/macOS:
 touch database/database.sqlite
 ```
 
-В `.env` указать:
+В `.env` должно быть:
 
 ```env
 DB_CONNECTION=sqlite
 ```
 
-### 7. Создание таблиц
-
-Выполнить миграции:
+### 8. Создание таблиц
 
 ```bash
 php artisan migrate
 ```
 
-При необходимости заполнить базу данными:
+### 9. Заполнение базы начальными данными
 
 ```bash
 php artisan db:seed
 ```
 
-### 8. Запуск
+### 10. Запуск frontend
 
-Запустить Laravel:
-
-```bash
-php artisan serve
-```
-
-Для разработки frontend:
+В отдельном терминале:
 
 ```bash
 npm run dev
 ```
 
-После запуска открыть адрес, указанный командой `php artisan serve`.
+### 11. Запуск Laravel
+
+В другом терминале:
+
+```bash
+php artisan serve
+```
+
+После запуска открыть:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Запуск после первой установки
+
+Если проект уже установлен, достаточно открыть два терминала.
+
+Терминал 1:
+
+```bash
+npm run dev
+```
+
+Терминал 2:
+
+```bash
+php artisan serve
+```
+
+После этого открыть:
+
+```text
+http://127.0.0.1:8000
+```
 
 ## Сборка frontend
 
@@ -142,63 +183,9 @@ npm run dev
 npm run build
 ```
 
-## Структура проекта
-
-```text
-app/
-├── Http/
-│   ├── Controllers/
-│   ├── Middleware/
-│   └── Requests/
-├── Models/
-└── Providers/
-
-database/
-├── migrations/
-├── seeders/
-└── database.sqlite
-
-resources/
-├── css/
-├── js/
-└── views/
-
-routes/
-└── web.php
-
-public/
-└── assets/
-
-tests/
-├── Feature/
-└── Unit/
-
-artisan
-composer.json
-composer.lock
-package.json
-package-lock.json
-vite.config.js
-.env.example
-.gitignore
-README.md
-```
-
-## Работа с расписанием
-
-Расписание представлено в виде таблицы.
-
-* столбцы — учебные группы;
-* строки — дни недели и пары;
-* карточки — занятия.
-
-Карточка занятия содержит информацию о предмете, преподавателе, аудитории, неделе и заметке.
-
-Занятия можно перемещать между ячейками с помощью Drag & Drop.
-
-При перемещении занятия в занятую ячейку система выполняет обмен занятий.
-
 ## База данных
+
+Проект использует SQLite.
 
 Структура базы данных создаётся с помощью Laravel Migration:
 
@@ -206,14 +193,111 @@ README.md
 php artisan migrate
 ```
 
-Основные сущности:
+Начальные данные создаются командой:
 
-* пользователи;
-* группы;
-* преподаватели;
-* предметы;
-* аудитории;
-* занятия;
-* связи преподавателей и предметов.
+```bash
+php artisan db:seed
+```
 
-Файл SQLite не хранится в репозитории и создаётся локально при установке проекта.
+Локальная SQLite-база не хранится в репозитории.
+
+## Структура проекта
+
+```text
+SheduleNSMK/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+├── routes/
+├── storage/
+├── tests/
+├── artisan
+├── composer.json
+├── composer.lock
+├── package.json
+├── package-lock.json
+├── phpunit.xml
+├── vite.config.js
+├── .env.example
+├── .gitignore
+└── README.md
+```
+
+## Зависимости
+
+Папки `vendor/` и `node_modules/` не хранятся в Git.
+
+После клонирования они устанавливаются командами:
+
+```bash
+composer install
+npm install
+```
+
+## Конфигурация
+
+Файл `.env` не хранится в репозитории.
+
+Для настройки используется:
+
+```text
+.env.example
+```
+
+После клонирования необходимо создать собственный `.env`.
+
+## Git
+
+В репозитории хранятся:
+
+- исходный код приложения;
+- миграции;
+- seeders;
+- конфигурационные файлы;
+- файлы frontend;
+- тесты;
+- `.env.example`;
+- README.
+
+Не хранятся:
+
+- `.env`;
+- `vendor/`;
+- `node_modules/`;
+- локальная SQLite-база;
+- кэш;
+- временные файлы.
+
+## Обновление проекта
+
+Получить последние изменения:
+
+```bash
+git pull
+```
+
+После обновления зависимостей:
+
+```bash
+composer install
+npm install
+```
+
+Если появились новые миграции:
+
+```bash
+php artisan migrate
+```
+
+## Автор
+
+Учебный проект для практической работы.
