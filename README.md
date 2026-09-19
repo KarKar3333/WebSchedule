@@ -71,12 +71,6 @@ Windows PowerShell:
 Copy-Item .env.example .env
 ```
 
-Linux/macOS:
-
-```bash
-cp .env.example .env
-```
-
 ### 5. Создание необходимых директорий Laravel
 
 Windows PowerShell:
@@ -87,16 +81,6 @@ New-Item -ItemType Directory -Force storage\framework\sessions
 New-Item -ItemType Directory -Force storage\framework\views
 New-Item -ItemType Directory -Force storage\logs
 New-Item -ItemType Directory -Force bootstrap\cache
-```
-
-Linux/macOS:
-
-```bash
-mkdir -p storage/framework/cache/data
-mkdir -p storage/framework/sessions
-mkdir -p storage/framework/views
-mkdir -p storage/logs
-mkdir -p bootstrap/cache
 ```
 
 ### 6. Генерация ключа приложения
@@ -114,14 +98,6 @@ Windows PowerShell:
 ```powershell
 New-Item database/database.sqlite -ItemType File
 ```
-
-Linux/macOS:
-
-```bash
-touch database/database.sqlite
-```
-
-В `.env` должно быть:
 
 ### 8. Создание таблиц
 
@@ -254,72 +230,77 @@ SheduleNSMK/
 └── README.md
 ```
 
-## Зависимости
 
-Папки `vendor/` и `node_modules/` не хранятся в Git.
+## Отчет по дневнику 
+### день 1 
 
-После клонирования они устанавливаются командами:
+#### Макет главного меню
 
-```bash
-composer install
-npm install
-```
+<img width="841" height="594" alt="изображение" src="https://github.com/user-attachments/assets/3461ac77-793e-470c-bbfe-7410618e500f" />
 
-## Конфигурация
+### день 2
 
-Файл `.env` не хранится в репозитории.
+#### Главное меню
 
-Для настройки используется:
+<img width="1919" height="914" alt="изображение" src="https://github.com/user-attachments/assets/d50ce423-d745-45ff-9c47-fdbdc0f152bc" />
 
-```text
-.env.example
-```
+#### Раздел руппы
 
-После клонирования необходимо создать собственный `.env`.
+<img width="1907" height="645" alt="изображение" src="https://github.com/user-attachments/assets/927390c9-e03a-4680-b4b2-2d6789deab01" />
 
-## Git
+##### Создание группы и редактирование
 
-В репозитории хранятся:
+<img width="1919" height="496" alt="изображение" src="https://github.com/user-attachments/assets/63dd49d7-416a-42db-8cb8-9887b093be0f" />
+<img width="1919" height="465" alt="изображение" src="https://github.com/user-attachments/assets/434b005a-4eca-415e-b863-940370e9443b" />
 
-- исходный код приложения;
-- миграции;
-- seeders;
-- конфигурационные файлы;
-- файлы frontend;
-- тесты;
-- `.env.example`;
-- README.
+### Раздел преподаватели 
 
-Не хранятся:
+<img width="1919" height="534" alt="изображение" src="https://github.com/user-attachments/assets/ce5e0b60-b454-4a95-9f2e-a6dcbc5a33b6" />
 
-- `.env`;
-- `vendor/`;
-- `node_modules/`;
-- локальная SQLite-база;
-- кэш;
-- временные файлы.
+##### Создание преподавателей и редактирование 
 
-## Обновление проекта
+<img width="1123" height="714" alt="изображение" src="https://github.com/user-attachments/assets/1164440d-0cad-4962-801c-7e4f1ce3a64d" />
+<img width="1133" height="740" alt="изображение" src="https://github.com/user-attachments/assets/eec674e5-eb22-4a5f-90c8-43b4b2a5606d" />
 
-Получить последние изменения:
+### Раздел Дисциплины
 
-```bash
-git pull
-```
+<img width="1919" height="620" alt="изображение" src="https://github.com/user-attachments/assets/23f567f5-7998-483a-be61-e07888bfd5d8" />
 
-После обновления зависимостей:
+##### Создание дисциплин и редактирование
 
-```bash
-composer install
-npm install
-```
+<img width="1107" height="765" alt="изображение" src="https://github.com/user-attachments/assets/6af833cd-9960-41a7-b9b6-c5c8f800446f" />
+<img width="1175" height="697" alt="изображение" src="https://github.com/user-attachments/assets/8efa345a-ae03-49eb-aaad-f0105157f943" />
 
-Если появились новые миграции:
 
-```bash
-php artisan migrate
-```
 
-## Автор
+### День 4 
+#### Система Drag & Drop 
+<img width="1913" height="909" alt="изображение" src="https://github.com/user-attachments/assets/dfbae074-0e61-4d75-8ed8-d7279054f1ca" />
 
-Учебный проект для практической работы.
+#### конфликт преподавателей, групп,дисциплин
+<img width="1915" height="908" alt="изображение" src="https://github.com/user-attachments/assets/e91052ce-0286-4e95-b3e0-d2e5a48e8d5d" />
+
+### День 5
+#### Индивидуальное задание
+##### учет пользователей
+<img width="1919" height="918" alt="изображение" src="https://github.com/user-attachments/assets/555a3462-5d0d-4ad8-88d9-323a91f7ff9c" />
+
+##### Создание пользователей и редактирование
+<img width="1128" height="629" alt="изображение" src="https://github.com/user-attachments/assets/8da80427-6257-4b3c-aabe-756d89587f3b" />
+<img width="1196" height="610" alt="изображение" src="https://github.com/user-attachments/assets/8b8172b1-edb6-46e7-828b-f69ade626d4a" />
+
+##### Разграничение ролей 
+###### Страница авторизации
+<img width="1919" height="916" alt="изображение" src="https://github.com/user-attachments/assets/a5a65c9e-df45-4806-b6c9-2bd7b5938b15" />
+
+###### Студент
+<img width="1919" height="911" alt="изображение" src="https://github.com/user-attachments/assets/50e659a7-9d34-43ea-aa98-5148db62673f" />
+<img width="1919" height="912" alt="изображение" src="https://github.com/user-attachments/assets/7a4a7a2d-657c-43be-b9de-afe5ed1fed18" />
+
+##### Преродаватель 
+<img width="1911" height="910" alt="изображение" src="https://github.com/user-attachments/assets/9980865c-37e9-45f6-a972-94180e899cb0" />
+###### Ограничение прав доступа 
+<img width="1909" height="896" alt="изображение" src="https://github.com/user-attachments/assets/5294ae02-a748-4802-9385-3b6ef60fc5be" />
+
+
+
