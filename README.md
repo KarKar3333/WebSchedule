@@ -290,16 +290,23 @@ SheduleNSMK/
 <img width="1196" height="610" alt="изображение" src="https://github.com/user-attachments/assets/8b8172b1-edb6-46e7-828b-f69ade626d4a" />
 
 ##### Разграничение ролей 
+
 ###### Страница авторизации
+
 <img width="1919" height="916" alt="изображение" src="https://github.com/user-attachments/assets/a5a65c9e-df45-4806-b6c9-2bd7b5938b15" />
 
 ###### Студент
+
 <img width="1919" height="911" alt="изображение" src="https://github.com/user-attachments/assets/50e659a7-9d34-43ea-aa98-5148db62673f" />
+
 <img width="1919" height="912" alt="изображение" src="https://github.com/user-attachments/assets/7a4a7a2d-657c-43be-b9de-afe5ed1fed18" />
 
 ##### Преродаватель 
+
 <img width="1911" height="910" alt="изображение" src="https://github.com/user-attachments/assets/9980865c-37e9-45f6-a972-94180e899cb0" />
-###### Ограничение прав доступа 
+
+Ограничение прав доступа 
+
 <img width="1909" height="896" alt="изображение" src="https://github.com/user-attachments/assets/5294ae02-a748-4802-9385-3b6ef60fc5be" />
 
 
