@@ -280,7 +280,7 @@ SheduleNSMK/
 <img width="1914" height="898" alt="изображение" src="https://github.com/user-attachments/assets/6120b586-fc71-49ba-a7e0-8cb2066ecd8c" />
 
 
-#### конфликт преподавателей, групп,дисциплин
+#### конфликт преподавателей, групп, дисциплин
 <img width="1915" height="908" alt="изображение" src="https://github.com/user-attachments/assets/e91052ce-0286-4e95-b3e0-d2e5a48e8d5d" />
 
 ### День 5
@@ -304,7 +304,7 @@ SheduleNSMK/
 
 <img width="1919" height="912" alt="изображение" src="https://github.com/user-attachments/assets/7a4a7a2d-657c-43be-b9de-afe5ed1fed18" />
 
-##### Преродаватель 
+##### Преподаватель 
 
 <img width="1911" height="910" alt="изображение" src="https://github.com/user-attachments/assets/9980865c-37e9-45f6-a972-94180e899cb0" />
 
