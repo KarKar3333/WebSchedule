@@ -1,4 +1,4 @@
-# SheduleNSMK
+# SсheduleNSMK
 
 Веб-приложение для создания и управления расписанием учебных занятий.
 
@@ -276,6 +276,9 @@ SheduleNSMK/
 ### День 4 
 #### Система Drag & Drop 
 <img width="1913" height="909" alt="изображение" src="https://github.com/user-attachments/assets/dfbae074-0e61-4d75-8ed8-d7279054f1ca" />
+<img width="1919" height="911" alt="изображение" src="https://github.com/user-attachments/assets/cd7e9175-9fea-4052-b9ef-e800393bea7f" />
+<img width="1914" height="898" alt="изображение" src="https://github.com/user-attachments/assets/6120b586-fc71-49ba-a7e0-8cb2066ecd8c" />
+
 
 #### конфликт преподавателей, групп,дисциплин
 <img width="1915" height="908" alt="изображение" src="https://github.com/user-attachments/assets/e91052ce-0286-4e95-b3e0-d2e5a48e8d5d" />
